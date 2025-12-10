@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EmployeePortalLite.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employees Report";
+    var total = (int)ViewData["TotalCount"];
+}
+
+<h1>Employees Report</h1>
+
+<p>Total Employees: @total</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.FullName</td>
+                <td>@e.Email</td>
+                <td>@e.Department</td>
+                <td>@e.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
