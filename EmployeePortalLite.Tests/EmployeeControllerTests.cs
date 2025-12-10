@@ -14,7 +14,7 @@ namespace EmployeePortalLite.Tests
         private ApplicationDbContext GetRealContext()
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EmployeePortalLiteDb;Trusted_Connection=True;MultipleActiveResultSets=true")
+                .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=aspnet-EmployeePortalLite-aaa77683-35a8-442e-975b-73c76de4a474;Trusted_Connection=True;MultipleActiveResultSets=true")
                 .Options;
 
             return new ApplicationDbContext(options);
